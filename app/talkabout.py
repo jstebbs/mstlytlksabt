@@ -1,6 +1,8 @@
 import os
 
 import tweepy
+import nltk
+from nltk.corpus import stopwords
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -22,8 +24,7 @@ def talkingabout(username):
 #username = "@KylieJenner"
     tweets = api.user_timeline(screen_name=username, count=2000)
 
-    import nltk
-    from nltk.corpus import stopwords
+
 
 
     new_stopwords = ["it","and","the","http","https", "co", "com", "org", "net", "&amp;", "rt", "-", "new","--"]
